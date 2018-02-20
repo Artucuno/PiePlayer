@@ -1,0 +1,17 @@
+Welcome to PiePlayer! Created by ArtGames101 (c) 2018
+
+
+[CREDITS]
+Credits to MrBackPack for helping me with pygame/plugin loading
+
+
+[INFORMATION]
+
+Version : v1.2-Beta
+
+Requirements Python : pygame, subprocess, sys, os, time
+Requirements Python 3 : pygame, subprocess, sys, os, webbrowser, time
+
+[WARNING]
+Dont attempt to edit!
+PiePlayer is REALLY Fragile and can break if edited!

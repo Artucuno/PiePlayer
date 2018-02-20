@@ -18,14 +18,44 @@ def main():
     print("PiePlayer\n"
           "================")
     print("\n"
-          "l. Load Songs (from Playlist)\n"
+          "l. Play Songs\n"
           "\n"
           "w. Find Songs on the web")
     choice = user_choice()
     if choice == "l":
-        subprocess.call(("python", "play.py"))
+        clear_screen()
+        print("PiePlayer Audio\n"
+              "===================")
+        print("\n"
+              "1. Play Playlist (Python)\n"
+              "\n"
+              "2. Play A Song (Python 3)\n"
+              "\n"
+              "i. Info\n"
+              "0. Back")
+        choice = user_choice()
+        if choice == "1":
+            subprocess.call(("python", "play.py"))
+        if choice == "2":
+            subprocess.call((sys.executable, "playr.py"))
+        if choice == "i":
+            clear_screen()
+            print("PiePlayer Audio\n"
+                  "===================")
+            print("\n"
+                  "Playlist:\n"
+                  "The Playlist is looped and shuffled!\n"
+                  "\n"
+                  "Play Song:\n"
+                  "Choose a song to play (is not looped)")
+            input("\n"
+                  "Back")
+            main()
     if choice == "w":
         webbrowser.open("https://ganna.com")
+        print("Opening Please wait...")
+        time.sleep(5)
+        main()
 
 main()
 
